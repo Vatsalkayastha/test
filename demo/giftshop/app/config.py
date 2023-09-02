@@ -1,9 +1,11 @@
 import openai
-from .env import OPENAI_API_KEY, SERPAPI_KEY
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 class Config:
-    openai_key = OPENAI_API_KEY
-    serpapi_key = SERPAPI_KEY
+    openai_key = os.getenv('OPENAI_API_KEY')
+    serpapi_key = os.getenv('SERPAPI_KEY')
     
     @staticmethod
     def get_openai_key():

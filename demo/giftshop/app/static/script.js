@@ -1,5 +1,19 @@
 (() => {
     'use strict'
+    
+    const budgetInput = document.getElementById('budget');
+    const negativeBudgetFeedback = document.querySelector('.negative-budget-feedback');
+
+    budgetInput.addEventListener('input', () => {
+        const budgetValue = parseFloat(budgetInput.value);
+        if (budgetValue < 0) {
+            budgetInput.setCustomValidity('invalid');
+            negativeBudgetFeedback.style.display = 'block';
+        } else {
+            budgetInput.setCustomValidity('');
+            negativeBudgetFeedback.style.display = 'none';
+        }
+    });
 
     // Fetch all the forms we want to apply custom Bootstrap validation styles to
     const forms = document.querySelectorAll('.needs-validation')
@@ -50,3 +64,4 @@ function setTheme(theme) {
 
     localStorage.setItem('theme', theme);
 }
+
