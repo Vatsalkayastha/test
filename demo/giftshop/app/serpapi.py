@@ -4,26 +4,23 @@ import logging
 
 serpapi_key = Config.get_serpapi_key()
 
-def get_product(product_keyword):
+def get_book_course_suggestions(topic):
     params = {
         "api_key": serpapi_key,
-        "engine": "google_shopping",
+        "engine": "google",
         "google_domain": "google.com",
-        "q": product_keyword,
+        "q": f"best {topic} books and courses",
         "hl": "en",
         "gl": "us",
-        "location": "United States",
-        "tbs": "mr:1,price:1,ppr_max:150,merchagg:g113872638|m114193152|m7388148",
-        "num": "2"
+        "num": 2  # You can adjust the number of results you want
     }
 
     search = GoogleSearch(params)
     results = search.get_dict()
     logging.info(results)
 
-    # Return the shopping results for this product
-    out = results.get('shopping_results', [])
+    # Return the search results for books and courses related to the topic
+    out = results.get('course_results', [])
     logging.info(out)
 
     return out
-

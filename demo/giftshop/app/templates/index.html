@@ -45,14 +45,14 @@
                         <div class="row g-3">
                             <div class="col-12">
                                 <label for="topic" class="form-label">Topic of Interest</label>
-                                <input type="text" class="form-control" id="topic" name="topic" placeholder="e.g., Programming, History, Science" required>
+                                <input type="text" class="form-control" id="topic" name="topic" placeholder="e.g., Programming, History, Science" value="" required>
                                 <div class="invalid-feedback">
                                     Please specify your topic of interest.
                                 </div>
                             </div>
                             <div class="col-12">
                                 <label for="learning-style" class="form-label">Preferred Learning Style</label>
-                                <select class="form-select" id="learning-style" name="learning-style" required>
+                                <select class="form-select" id="learning_style" name="learning_style" required>
                                     <option value="" disabled selected>Select your preferred learning style</option>
                                     <option value="Books">Books</option>
                                     <option value="Courses">Courses</option>
@@ -63,7 +63,7 @@
                             </div>
                             <div class="col-12">
                                 <label for="budget" class="form-label">Budget (in Rupees)</label>
-                                <input type="number" class="form-control" id="budget" name="budget" placeholder="Enter your budget" required>
+                                <input type="number" class="form-control" id="budget" name="budget" placeholder="Enter your budget" value="" required>
                                 <div class="invalid-feedback">
                                     Please specify your budget.
                                 </div>
@@ -74,7 +74,7 @@
                             
                             <div class="col-12">
                                 <label for="experience-level" class="form-label">Your Experience Level</label>
-                                <select class="form-select" id="experience-level" name="experience-level" required>
+                                <select class="form-select" id="experience_level" name="experience_level" required>
                                     <option value="" disabled selected>Select your experience level</option>
                                     <option value="Beginner">Beginner</option>
                                     <option value="Intermediate">Intermediate</option>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="col-12">
                                 <label for="preferred-format" class="form-label">Preferred Format</label>
-                                <select class="form-select" id="preferred-format" name="preferred-format" required>
+                                <select class="form-select" id="preferred_format" name="preferred_format" required>
                                     <option value="" disabled selected>Select your preferred format</option>
                                     <option value="Text">Text</option>
                                     <option value="Video">Video</option>
@@ -95,25 +95,26 @@
                                     Please select your preferred format.
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <label for="description" class="form-label">Description (Optional)</label>
-                                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Provide a brief description of the course or book you're looking for"></textarea>
-                            </div>
+                            
                             <div class="col-12">
                                 <label class="form-label">Do you have a preference for learning from a specific website?</label>
                             <div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="specific-website-preference" id="specific-website-yes" value="Yes" required>
+                                    <input class="form-check-input" type="radio" name="specific_website_preference" id="specific_website_yes" value="Yes" required>
                                     <label class="form-check-label" for="specific-website-yes">Yes</label>
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="specific-website-preference" id="specific-website-no" value="No" required checked>
+                                    <input class="form-check-input" type="radio" name="specific_website_preference" id="specific_website_no" value="No" required checked>
                                     <label class="form-check-label" for="specific-website-no">No</label>
                                 </div>
                                 <div class="invalid-feedback">
                                     Please select whether you have a preference for learning from a specific website.
                                 </div>
                             </div>  
+                            </div>
+                            <div class="col-12">
+                                <label for="description" class="form-label">Description (Optional)</label>
+                                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Provide a brief description of the course or book you're looking for and if you have specific website please mention it" value=""></textarea>
                             </div>
                             
                         </div>
@@ -122,7 +123,7 @@
                     </form>
                 </div>
             </div>
-        </main>
+        </main> 
     
         <footer class="my-5 text-body-secondary text-center text-small">
             <p class="mb-1">&copy; 2017–2023 Your Learning Hub - Vatsal Kayastha</p>
