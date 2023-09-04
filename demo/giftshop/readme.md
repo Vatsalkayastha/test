@@ -1,6 +1,6 @@
-# Simple AI Gift Shop
+# Simple AI-Powered Learning Hub
 
-A web application designed to suggest gifts based on user inputs.
+An AI-powered tool to recommend books and courses based on your learning preferences.
 
 ## Technologies Used:
 - **Web Framework**: Flask
@@ -21,5 +21,5 @@ A web application designed to suggest gifts based on user inputs.
    ```
 
 ## Credits:
-- **Developer**: Diógenes Betat Roos
-- **GitHub**: https://github.com/DiogenesBR
+- **Developer**: Vatsal Kayastha
+- **GitHub**: https://github.com/Vatsalkayastha/test
